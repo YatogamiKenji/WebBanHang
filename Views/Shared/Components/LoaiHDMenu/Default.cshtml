@@ -1,0 +1,17 @@
+﻿@model IEnumerable<LoaiHoatDong>
+<div class="col-lg-3">
+    <div class="hero__categories">
+        <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>Các loại hoạt động</span>
+        </div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a asp-controller="Home" asp-action="HoatDongTheoLoai" asp-route-maloaihd="@item.MaLoaiHd">@item.TenLoaiHd</a>
+                </li>    
+            }
+        </ul>
+    </div>
+</div>
